@@ -1,0 +1,101 @@
+:root {
+    --main-color:#1e202b;
+    --secondary-color:#333544;
+    --light-blue:#049ad8;
+}
+* {
+    font-family: "Roboto", sans-serif;
+}
+body {
+    background-color: var(--main-color) !important;
+}
+.container {
+    padding: 0 !important;
+    width: 80% !important;
+}
+.navbar-brand  {
+    flex: 0 1 50%;
+}
+.logo-title p,.headerContent,.copyright p {
+    font-size: 14px;
+    color:#bfc1c8;
+}
+.nav-link.active {
+    border: 1px solid var(--light-blue);
+}
+.bgContainer {
+    background-image: url(../banner.png);
+    background-position: center;
+    background-size: cover;
+    height: 30vh;
+}
+form {
+    background-color: var(--main-color);
+    padding-right:0 !important;
+}
+#Find ,#Sign{
+    background-color: var(--light-blue) !important;
+}
+.degree {
+    font-size: 70px;
+}
+.city,.lowerDegree {
+    font-size: 18px;
+    color:#bfc1c8;
+}
+.row>* {
+    padding: 0 !important;
+}
+.col-lg-4 ,footer{
+    background-color: #333544;
+}
+.col-lg-4.dark {
+    background-color: #272936;
+}
+.forecast-card.dark .headerContent{
+    background-color: #232531;
+}
+.forecast-card span {
+    color: #bfc1c8;
+    padding-inline: 5px;
+}
+.forecast-card svg {
+    color: #bfc1c8;
+    padding-inline: 5px;
+}
+.weatherStatus {
+    color: var(--light-blue);
+}
+.headerContent {
+    background-color: #2e303d;
+}
+.weatherContainer {
+    margin-top: -5%;
+    margin-bottom: 50px;
+}
+.subscripe ul li {
+    background-color: var(--main-color);
+}
+.subscripe ul li svg {
+    color: var(--light-blue);
+    height: 1.2em !important;
+}
+footer {
+    padding: 70px 0;
+}
+form input:focus{
+    outline: none;
+}
+@media only screen and (max-width:992px) {
+    .navbar-toggler-icon {
+        background-image: url(../bars-solid.svg) !important;
+        width: 25px !important;
+        height: 25px !important;
+    }
+    .navbar-toggler {
+        border-color: var(--main-color) !important;
+    }
+    .subscripe ul {
+        margin-top: 20px;
+    }
+}

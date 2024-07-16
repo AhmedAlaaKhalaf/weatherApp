@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather</title>
+    <!-- --------------CSS Links----------------- -->
+    <link rel="stylesheet" href="CSS/style.css" />
+    <link rel="stylesheet" href="CSS/all.min.css" />
+    <!-- --------------Bootstrap CSS Link----------------- -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <!-- ---------------------Font Import------------------ -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg p-4">
+      <div class="container-fluid container">
+        <a class="navbar-brand d-flex gap-3" href="#">
+          <img src="logo.png" alt="logo" width="50" height="40">
+          <div class="logo-title">
+            <h5 class="my-0 text-white">Weather</h5>
+            <p class="fw-lighter">tagline goes here</p>
+          </div>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav gap-3">
+            <a class="nav-link text-white active rounded-5 px-4" aria-current="page" href="#">Home</a>
+            <a class="nav-link text-white" href="#">News</a>
+            <a class="nav-link text-white" href="#">Live Camera</a>
+            <a class="nav-link text-white">Photos</a>
+            <a class="nav-link text-white">Contact</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="site-container">
+      <div class="bgContainer d-flex justify-content-center align-items-center">
+        <div class="container">
+          <div class="searchContainer">
+            <form class="d-flex justify-content-between align-items-center p-2 rounded-5">
+              <input type="search" name="find" id="find" placeholder="Find your location..." class="bg-transparent border-0 px-3 w-100 text-white">
+              <input type="button" value="Find" id="Find" class="px-5 py-2 rounded-5 border-0 text-white">
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="weatherContainer">
+        <div class="container">
+          <div class="row rounded-2">
+            <div class="col-lg-4">
+              <div class="forecast-card pb-4">
+                <div class="headerContent d-flex align-items-center py-3 px-3 d-flex justify-content-between">
+                  <p class="m-0 todayName">Saturday</p>
+                  <div class="m-0 todayDate"><span class="dayNumber">13</span><span class="month">may</span></div>
+                </div>
+                <div class="weatherContent py-5 px-3 text-white">
+                  <h6 class="city" id="currentCity">Cairo</h6>
+                    <div  class="degree">
+                  <span id="currentDegree">32</span>
+                  <span><sup>o</sup>C</span></div>
+                </div>
+                <div class="weatherIcon px-3">
+                  <img src="logo.png" id="currentImg" alt="logo" width="50" height="40">
+                </div>
+                <div class="weatherStatus px-3 py-2">
+                  <p class="fw-light" id="weatherStatus">clear</p>
+                </div>
+                <i class="fa-solid fa-umbrella fa-sm"></i><span id="humidity">20%</span>
+                <i class="fa-solid fa-wind fa-sm"></i><span id="windSpeed">18Km/h</span>
+                <i class="fa-solid fa-poo-storm fa-sm"></i><span id="windDirection">East</span>
+              </div>
+            </div>
+              <div class="col-lg-4 dark">
+                <div class="forecast-card dark text-center">
+                  <div class="headerContent d-flex align-items-center py-3 px-3 d-flex justify-content-center">
+                    <p class="m-0 nextDayName">Saturday</p>
+                  </div>
+                  <div class="weatherIcon p-4">
+                    <img class="nextImg" src="logo.png" alt="logo" width="50" height="40">
+                  </div>
+                  <div class="weatherContent py-2 px-3 text-white">
+                    <h3 class="higherDegree nextMaxTemp">32<sup>o</sup>C</h3>
+                    <h6 class="lowerDegree fw-light nextLowTemp">26.9 <sup>o</sup></h6>
+                  </div>
+                  <div class="weatherStatus px-3 py-2">
+                    <p class="fw-light nextWeatherStatus">clear</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="forecast-card text-center">
+                  <div class="headerContent d-flex align-items-center py-3 px-3 d-flex justify-content-center">
+                    <p class="m-0 nextDayName">Saturday</p>
+                  </div>
+                  <div class="weatherIcon p-4">
+                    <img class="nextImg" src="logo.png" alt="logo" width="50" height="40">
+                  </div>
+                  <div class="weatherContent py-2 px-3 text-white">
+                    <h3 class="higherDegree nextMaxTemp">32<sup>o</sup>C</h3>
+                    <h6 class="lowerDegree fw-light nextLowTemp">26.9 <sup>o</sup></h6>
+                  </div>
+                  <div class="weatherStatus px-3 py-2">
+                    <p class="fw-light nextWeatherStatus">clear</p>
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="subscripe">
+        <div class="container">
+          <div class="row justify-content-between">
+            <div class="col-lg-7">
+              <form class="d-flex justify-content-between align-items-center p-2 rounded-5">
+                <input type="email" name="sign" id="sign" placeholder="Enter your email address to subscripe..." class="bg-transparent border-0 px-3 w-100 text-white">
+                <input type="button" value="subscripe" id="Sign" class="px-5 py-2 rounded-5 border-0 text-white">
+              </form>
+            </div>
+               <div class="col-lg-3">
+                <ul class="social list-unstyled d-flex gap-3">
+                  <li class="p-3 rounded-circle"><a href="#"><svg class="svg-inline--fa fa-facebook-f" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="facebook-f" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" data-fa-i2svg=""><path fill="currentColor" d="M80 299.3V512H196V299.3h86.5l18-97.8H196V166.9c0-51.7 20.3-71.5 72.7-71.5c16.3 0 29.4 .4 37 1.2V7.9C291.4 4 256.4 0 236.2 0C129.3 0 80 50.5 80 159.4v42.1H14v97.8H80z"></path></svg><!-- <i class="fa-brands fa-facebook-f"></i> Font Awesome fontawesome.com --></a></li>
+                  <li class="p-3 rounded-circle"><a href="#"><svg class="svg-inline--fa fa-twitter" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="twitter" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path></svg><!-- <i class="fa-brands fa-twitter"></i> Font Awesome fontawesome.com --></a></li>
+                  <li class="p-3 rounded-circle"><a href="#"><svg class="svg-inline--fa fa-google" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="google" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 488 512" data-fa-i2svg=""><path fill="currentColor" d="M488 261.8C488 403.3 391.1 504 248 504 110.8 504 0 393.2 0 256S110.8 8 248 8c66.8 0 123 24.5 166.3 64.9l-67.5 64.9C258.5 52.6 94.3 116.6 94.3 256c0 86.5 69.1 156.6 153.7 156.6 98.2 0 135-70.4 140.8-106.9H248v-85.3h236.1c2.3 12.7 3.9 24.9 3.9 41.4z"></path></svg><!-- <i class="fa-brands fa-google"></i> Font Awesome fontawesome.com --></a></li>
+                  <li class="p-3 rounded-circle"><a href="#"><svg class="svg-inline--fa fa-github" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="github" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" data-fa-i2svg=""><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg><!-- <i class="fa-brands fa-github"></i> Font Awesome fontawesome.com --></a></li>
+                <ul>
+               </div>
+          </div>
+          <div class="copyright">
+            <p>Copyright 2014 Company name. Designed by Themezy. All rights reserved</p>
+          </div>
+        </div>
+      </div>
+      
+    </footer>
+    <!-- --------------Js Links----------------- -->
+    <script src="JS/index.js"></script>
+    <script src="JS/all.min.js"></script>
+    <!-- --------------Bootstrap Js link-------------- -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
