@@ -17,7 +17,7 @@ let todayName= document.querySelector(".todayName")
 let nextDayName= document.querySelectorAll(".nextDayName")
 
 async function getWeather (cityName) {
-      var res = await fetch (`http://api.weatherapi.com/v1/forecast.json?key=35a0725d911247b4bd8184525241307&q=${cityName}&days=3`, {method:"GET"})
+      var res = await fetch (`https://api.weatherapi.com/v1/forecast.json?key=35a0725d911247b4bd8184525241307&q=${cityName}&days=3`, {method:"GET"})
       var data = await res.json()
       return data;
 }
